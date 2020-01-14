@@ -2,6 +2,7 @@ package br.com.smartagenda.endpoint;
 
 import br.com.smartagenda.model.Event;
 import br.com.smartagenda.repository.EventRepository;
+import br.com.smartagenda.security.WebConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +32,7 @@ public class EventEndpoint {
 
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
-        eventDAO.delete(id);
+        eventDAO.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

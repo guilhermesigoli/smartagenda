@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 public class Event extends AbstractEntity {
     private String name;
     private String date;
-    private String hour;
+    private String startHour;
+    private String endHour;
+
 
     public String getName() {
         return name;
@@ -24,12 +26,20 @@ public class Event extends AbstractEntity {
         this.date = date;
     }
 
-    public String getHour() {
-        return hour;
+    public String getStartHour() {
+        return startHour;
     }
 
-    public void setHour(String hour) {
-        this.hour = hour;
+    public void setStartHour(String startHour) {
+        this.startHour = startHour;
+    }
+
+    public String getEndHour() {
+        return endHour;
+    }
+
+    public void setEndHour(String endHour) {
+        this.endHour = endHour;
     }
 }
 
